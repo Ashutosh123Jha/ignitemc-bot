@@ -13,7 +13,8 @@ const client = new Client({
   ]
 });
 
-client.once("ready", () => {
+client.on("ready", () => {
+  console.log("READY EVENT FIRED");
   console.log(`Logged in as ${client.user.tag}`);
 });
 
