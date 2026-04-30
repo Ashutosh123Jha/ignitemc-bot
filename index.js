@@ -1,3 +1,4 @@
+console.log("Bot file started");
 require("dotenv").config();
 const { Client, GatewayIntentBits } = require("discord.js");
 
@@ -60,7 +61,7 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log("Web server started");
 });
-
+console.log("About to login...");
 client.login(process.env.TOKEN)
   .then(() => console.log("Discord bot login success"))
   .catch(err => console.error("Login error:", err));
