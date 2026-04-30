@@ -61,4 +61,6 @@ app.listen(process.env.PORT || 3000, () => {
   console.log("Web server started");
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
+  .then(() => console.log("Discord bot login success"))
+  .catch(err => console.error("Login error:", err));
