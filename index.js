@@ -68,3 +68,5 @@ console.log("TOKEN length:", process.env.TOKEN?.length);
 client.login(process.env.TOKEN)
   .then(() => console.log("Discord bot login success"))
   .catch(err => console.error("Login error:", err));
+client.on("error", console.error);
+client.on("debug", console.log);
